@@ -1,0 +1,112 @@
+@media screen and (max-width: 1600px) {
+    .header {
+        & .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__img {
+            width: 50%;
+        }
+        &::before {
+            scale: 0.7;
+            inset: -1.5% 40% auto auto;
+        }
+    }
+    .compare {
+        &.orbit {
+            .compare {
+                &-orbit {
+                    &-sun_wrap {
+                        inset: 70% auto auto -105vw;
+                        height: 120vw;
+                    }
+                    &__img {
+                        &:first-of-type {
+                            left: calc(15% + 9.375%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    html {
+        font-size: 10px;
+    }
+    .container {
+        width: 85%;
+    }
+    .header {
+        &::before {
+            scale: 0.6;
+            inset: -5.5% 20% auto auto;
+        }
+    }
+    .planets {
+        &-list {
+            &__item {
+                &.active {
+                    padding-left: 1.3rem;
+                    &::before {
+                        scale: .9;
+                        inset: 50% auto auto 0;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+    .compare {
+        &-list {
+            max-width: 12.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+    .header {
+        &::before {
+            inset: -7.5% 10% auto auto;
+        }
+    }
+    .compare {
+        &__symbol {
+            width: 10%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        &::before {
+            scale: .3;
+            inset: -6.5% -35% auto auto;
+        }
+    }
+    .planets {
+        & .container {
+            flex-direction: column;
+        }
+        &-group {
+            margin-bottom: 1rem;
+        }
+        &__text {
+            margin-bottom: 1rem;
+        }
+    }
+    .compare {
+        &-item {
+            max-width: 14rem;
+            &__number {
+                font-size: 3rem;
+            }
+        }
+    }
+}

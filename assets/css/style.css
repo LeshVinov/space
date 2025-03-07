@@ -1,0 +1,731 @@
+@font-face {
+  font-family: "Epilepsy-Sans";
+  font-weight: 400;
+  src: url(../fonts/EpilepsySans.ttf);
+}
+@font-face {
+  font-family: "Epilepsy-Sans";
+  font-weight: 700;
+  src: url(../fonts/EpilepsySansBold.ttf);
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background: #020202 url("../img/interface/bg.webp");
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Epilepsy-Sans", serif;
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  background: url("../img/interface/overlay.webp") repeat center/cover;
+  width: 100%;
+  height: 100%;
+  opacity: 15%;
+  pointer-events: none;
+  z-index: 998;
+}
+body::after {
+  content: "";
+  position: absolute;
+  background: url("../img/star.webp") no-repeat center/contain;
+  inset: 60% auto auto 65vw;
+  z-index: 1;
+  width: 52.734375vw;
+  height: 52.734375vw;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #020202;
+  opacity: 1;
+  transition: all 0.3s;
+  z-index: 999;
+  pointer-events: none;
+}
+.loader__img {
+  max-width: 10rem;
+  margin-bottom: 1rem;
+}
+.loader__text {
+  color: #fff;
+  font-size: 5rem;
+}
+
+button {
+  border: none;
+  padding: 0;
+}
+
+span {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(153, 153, 153, 0.8043592437) 100%);
+}
+
+.title {
+  text-align: center;
+  color: #9FECD2;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.info {
+  text-align: center;
+  color: #81B0B7;
+  font-size: 1.75rem;
+}
+
+.container {
+  max-width: 52.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translateY(-50%);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+.header {
+  padding-top: 7.25rem;
+}
+.header::before {
+  content: url("../img/header-bg.svg");
+  position: absolute;
+  inset: 0 50% auto auto;
+  transform: translateX(25%);
+}
+
+.planets {
+  padding-top: 13.3125rem;
+}
+.planets .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.planets-group {
+  position: relative;
+  max-width: 18.75rem;
+}
+.planets-group__wrap {
+  padding: 1px;
+  background: linear-gradient(180deg, rgb(208, 183, 141) 0%, rgb(69, 61, 52) 100%);
+  max-height: 3.25rem;
+  cursor: pointer;
+}
+.planets-group__button {
+  position: relative;
+  text-align: left;
+  min-width: 18.75rem;
+  height: 3.125rem;
+  background-color: #020202;
+  padding-left: 1.25rem;
+  cursor: pointer;
+}
+.planets-group__button::before {
+  content: "";
+  background: linear-gradient(180deg, rgb(208, 183, 141) 0%, rgb(69, 61, 52) 100%);
+  position: absolute;
+  inset: 0 0 auto auto;
+  height: 3.125rem;
+  width: 3.125rem;
+}
+.planets-group__button::after {
+  content: url("../img/icons/select_arrow.svg");
+  position: absolute;
+  inset: calc(50% - 6px) calc(1.5625rem - 9.2px) auto auto;
+  transform-origin: center;
+  line-height: 0;
+  pointer-events: none;
+}
+.planets-group__button span {
+  font-size: 1.75rem;
+}
+.planets-list {
+  position: absolute;
+  top: 3.75rem;
+  background-color: rgba(27, 27, 27, 0.7);
+  border: 1px solid rgba(252, 179, 3, 0.5);
+  box-shadow: 0 0 5px rgba(252, 179, 3, 0.5);
+  backdrop-filter: blur(12.5rem);
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  padding: 0 0.9375rem;
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 0.3s, height 0.3s;
+}
+.planets-list.active {
+  opacity: 1;
+  z-index: 2;
+  height: 22.3125rem;
+}
+.planets-list__item {
+  list-style-type: none;
+  color: #81B0B7;
+  font-size: 1.75rem;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.planets-list__item:hover {
+  color: #fff;
+}
+.planets-list__item.active {
+  position: relative;
+  color: #9FECD2;
+  padding-left: 1rem;
+  pointer-events: none;
+}
+.planets-list__item.active::before {
+  content: url("../img/icons/select-active.svg");
+  position: absolute;
+  inset: auto auto auto 0;
+}
+.planets-list__item:not(:last-of-type) {
+  margin-bottom: 0.625rem;
+}
+.planets__text {
+  background-image: linear-gradient(180deg, rgb(208, 183, 141) 0%, rgb(69, 61, 52) 100%);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.compare {
+  padding: 4.6875rem 0;
+}
+.compare:last-of-type {
+  padding-bottom: 12.5rem;
+}
+.compare__info {
+  margin-bottom: 1.875rem;
+}
+.compare-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.compare-item {
+  display: flex;
+  align-items: flex-end;
+  max-width: 18.75rem;
+  width: 100%;
+}
+.compare-item:first-of-type .compare-list:first-of-type {
+  justify-content: flex-end;
+}
+.compare-item:first-of-type .compare-item-wrap {
+  justify-content: flex-end;
+}
+.compare-item:first-of-type .compare-item__planet {
+  width: 10%;
+}
+.compare-item:first-of-type .compare-item__number {
+  text-align: right;
+  justify-content: flex-end;
+}
+.compare-item:first-of-type .compare-item-wrap_with-list {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.compare-item:last-of-type .compare-item-wrap {
+  justify-content: flex-start;
+}
+.compare-item:last-of-type .compare-item__planet {
+  width: 100%;
+}
+.compare-item:last-of-type .compare-item-wrap_with-list {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.compare-item-wrap {
+  max-width: 18.75rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.compare-item-wrap_with-img {
+  position: relative;
+  min-height: 18.75rem;
+}
+.compare-item-wrap_with-img span {
+  position: absolute;
+}
+.compare-item-wrap_with-list {
+  height: 100%;
+  flex-direction: column;
+}
+.compare-item__planet {
+  width: 100%;
+}
+.compare-item__number {
+  inset: auto auto 0 auto;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  font-size: 4rem;
+}
+.compare-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 8.0625rem;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+.compare-list__item {
+  width: 15px;
+  height: 15px;
+}
+.compare.orbit {
+  padding-bottom: 9.375rem;
+  position: relative;
+}
+.compare.orbit .compare-orbit {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 85%;
+  height: 1px;
+  background: linear-gradient(180deg, rgb(255, 239, 200) 0%, rgb(171, 144, 101) 19%, rgb(115, 115, 115) 53%, rgb(171, 144, 101) 100%);
+}
+.compare.orbit .compare-orbit__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  max-width: 10.25rem;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.compare.orbit .compare-orbit__img:first-of-type {
+  left: 34.375%;
+}
+.compare.orbit .compare-orbit__img:last-of-type {
+  left: 100%;
+}
+.compare.orbit .compare-orbit-sun_wrap {
+  position: absolute;
+  background: url("../img/sun.webp") no-repeat center/contain;
+  inset: 70% auto auto -110vw;
+  z-index: 1;
+  width: 160vw;
+  height: 160vw;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transform-origin: top;
+  animation: spin 240s linear infinite;
+}
+
+@media screen and (max-width: 1600px) {
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__img {
+    width: 50%;
+  }
+  .header::before {
+    scale: 0.7;
+    inset: -1.5% 40% auto auto;
+  }
+  .compare.orbit .compare-orbit-sun_wrap {
+    inset: 70% auto auto -105vw;
+    height: 120vw;
+  }
+  .compare.orbit .compare-orbit__img:first-of-type {
+    left: 24.375%;
+  }
+}
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    width: 85%;
+  }
+  .header::before {
+    scale: 0.6;
+    inset: -5.5% 20% auto auto;
+  }
+  .planets-list__item.active {
+    padding-left: 1.3rem;
+  }
+  .planets-list__item.active::before {
+    scale: 0.9;
+    inset: 50% auto auto 0;
+    transform: translateY(-50%);
+  }
+  .compare-list {
+    max-width: 12.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+  .header::before {
+    inset: -7.5% 10% auto auto;
+  }
+  .compare__symbol {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header::before {
+    scale: 0.3;
+    inset: -6.5% -35% auto auto;
+  }
+  .planets .container {
+    flex-direction: column;
+  }
+  .planets-group {
+    margin-bottom: 1rem;
+  }
+  .planets__text {
+    margin-bottom: 1rem;
+  }
+  .compare-item {
+    max-width: 14rem;
+  }
+  .compare-item__number {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

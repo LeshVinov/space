@@ -1,0 +1,90 @@
+@use './variables' as *;
+
+*,*:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    background: #020202 url('../img/interface/bg.webp');
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Epilepsy-Sans', serif;
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../img/interface/overlay.webp') repeat center / cover;
+        width: 100%;
+        height: 100%;
+        opacity: 15%;
+        pointer-events: none;
+        z-index: 998;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        background: url('../img/star.webp') no-repeat center / contain;
+        inset: 60% auto auto 65vw;
+        z-index: 1;
+        width: 52.734375vw;
+        height: 52.734375vw;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #020202;
+    opacity: 1;
+    transition: all .3s;
+    z-index: 999;
+    pointer-events: none;
+    &__img {
+        max-width: 10rem;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        color: #fff;
+        font-size: 5rem;
+    }
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+span {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: $white_gradient;
+}
+
+.title {
+    text-align: center;
+    color: $main_aqua;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.info {
+    text-align: center;
+    color: $secondary_aqua;
+    font-size: 1.75rem;
+}
+
+.container {
+    max-width: 52.5rem;
+    width: 100%;
+    margin: 0 auto;
+}
+

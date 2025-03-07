@@ -1,0 +1,11 @@
+// Header template
+
+.header {
+    padding-top: 7.25rem;
+    &::before {
+        content: url('../img/header-bg.svg');
+        position: absolute;
+        inset: 0 50% auto auto;
+        transform: translateX(25%);
+    }
+}
